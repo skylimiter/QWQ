@@ -159,7 +159,7 @@ function nav(path) {
 
     let search_text = model.is_search_page ? model.q || '' : '',
         search_bar = `<div class="mdui-toolbar-spacer"></div>
-        <div class="max-height:"100%" max-width:"100%" width:"auto" height:"auto" position:"absolute" top:"0" bottom:"0" left:"0" right:"0" margin:"auto"><img src="https://upload.cc/i1/2021/06/08/WuyZA3.jpg"/></div>
+        <div class="max-height:"50%" max-width:"50%" width:"auto" height:"auto" position:"absolute" top:"0" bottom:"0" left:"0" right:"0" margin:"auto"><img src="https://upload.cc/i1/2021/06/08/WuyZA3.jpg"/></div>
         <div id="search_bar" class="mdui-textfield mdui-textfield-expandable mdui-float-right mdui-textfield-expanded">
             <form id="search_bar_form" method="get" action="/${cur}:search">
                 <input class="mdui-textfield-input" type="text" name="q" autocomplete ="off" placeholder="搜尋" value="${search_text}"/>
