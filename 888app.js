@@ -159,7 +159,7 @@ function nav(path) {
 
     let search_text = model.is_search_page ? model.q || '' : '',
         search_bar = `<div class="mdui-toolbar-spacer"></div>
-        <a href="https://discord.com/invite/XrAa7RDBhw"><img src="https://upload.cc/i1/2021/06/08/WuyZA3.jpg" width="40" height="40" padding-right:"8px" padding-left:"8px" margin-right:"auto" margin-left:"auto" max-width:"600px"></a>
+        <a href="https://discord.com/invite/XrAa7RDBhw"><img src="https://upload.cc/i1/2021/06/08/WuyZA3.jpg" tittle:"點我進入群組~~"width="40" height="40" padding-right:"8px" padding-left:"8px" margin-right:"auto" margin-left:"auto" max-width:"600px"></a>
         <div id="search_bar" class="mdui-textfield mdui-textfield-expandable mdui-float-right mdui-textfield-expanded">
             <form id="search_bar_form" method="get" action="/${cur}:search">
                 <input class="mdui-textfield-input" type="text" name="q" autocomplete ="off" placeholder="搜尋" value="${search_text}"/>
