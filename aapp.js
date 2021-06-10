@@ -159,7 +159,7 @@ function nav(path) {
 
     let search_text = model.is_search_page ? model.q || '' : '',
         search_bar = `<div class="mdui-toolbar-spacer"></div>
-        <a href="//discord.com/invite/XrAa7RDBhw" target="_blank" class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-tooltip="{content: \'點我加入群組！\'}" alt="點我加入群組！"><img src="https://img-premium.flaticon.com/png/512/356/356009.png?token=exp=1623328924~hmac=ee658b20ee0e156b0e4b04ffbb8dfe59" width="45" height="45"></a>
+        <a href="//discord.com/invite/XrAa7RDBhw" target="_blank" class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-tooltip="{content: \'點我加入群組！\'}" alt="點我加入群組！"><img src="https://img-premium.flaticon.com/png/512/356/356009.png?token=exp=1623328924~hmac=ee658b20ee0e156b0e4b04ffbb8dfe59" width="30" height="45"></a>
             <div id="search_bar" class="mdui-textfield mdui-textfield-expandable mdui-float-right mdui-textfield-expanded">
             <form id="search_bar_form" method="get" action="/${cur}:search">
                 <input class="mdui-textfield-input" type="text" name="q" autocomplete ="off" placeholder="搜尋" value="${search_text}"/>
