@@ -159,7 +159,7 @@ function nav(path) {
 
     let search_text = model.is_search_page ? model.q || '' : '',
         search_bar = `<div class="mdui-toolbar-spacer"></div>
-        <a href="//twitter.com/TW_NEKO_CHAN" target="_blank" class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-tooltip="{content: \'Twitter\'}" alt="Twitter">\n    <img src="//image.flaticon.com/icons/svg/1384/1384075.svg" width="30" height="45" />\n  </a>\n  <a href="//ko-fi.com/tw_neko_chan" target="_blank" class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-tooltip="{content: \'Donate\'}" alt="Donate">\n    <img src="//image.flaticon.com/icons/svg/2917/2917845.svg" width="30" height="45" />\n  </a>
+        <a href="//twitter.com/TW_NEKO_CHAN" target="_blank" class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-tooltip="{content: \'Twitter\'}" alt="Twitter">\n    <img src="//i.postimg.cc/NF9g6Vqv/image.png" width="45" height="45" />\n  </a>\n  <a href="//ko-fi.com/tw_neko_chan" target="_blank" class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-tooltip="{content: \'Donate\'}" alt="Donate">\n    <img src="//image.flaticon.com/icons/svg/2917/2917845.svg" width="30" height="45" />\n  </a>
             <div id="search_bar" class="mdui-textfield mdui-textfield-expandable mdui-float-right mdui-textfield-expanded">
             <form id="search_bar_form" method="get" action="/${cur}:search">
                 <input class="mdui-textfield-input" type="text" name="q" autocomplete ="off" placeholder="搜尋" value="${search_text}"/>
