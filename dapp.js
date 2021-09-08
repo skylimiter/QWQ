@@ -823,34 +823,15 @@ function file_video(path) {
     var urlPath = url.replace(`.${ext}`, "");
     var fileName = urlPath.split('/').pop();
     urlPath = urlPath.substring(0, urlPath.lastIndexOf('/') + 1);
-    let player_items = [{
-                text: 'MXPlayer(Free)',
-                href: `intent:${url}#Intent;package=com.mxtech.videoplayer.ad;S.title=${path};end`,
-            },
-            {
-                text: 'MXPlayer(Pro)',
-                href: `intent:${url}#Intent;package=com.mxtech.videoplayer.pro;S.title=${path};end`,
-            },
-            {
-                text: 'nPlayer',
-                href: `nplayer-${url}`,
-            },
-            {
-                text: 'VLC',
-                href: `vlc://${url}`,
-            },
-            {
-                text: 'PotPlayer',
-                href: `potplayer://${url}`
-            }
-        ]
-        .map(it => `<li class="mdui-menu-item"><a href="${it.href}" class="mdui-ripple">${it.text}</a></li>`)
-        .join('');
-    player_items += `<li class="mdui-divider"></li>
-                   <li class="mdui-menu-item"><a id="copy-link" class="mdui-ripple">复制链接</a></li>`;
     var playerUI;
     var playerType;
-
+    
+  const playBtn = `
+      <button class="mdui-btn mdui-ripple mdui-color-theme-accent" mdui-menu="{target:'#player-items'}">
+        <i class="mdui-icon material-icons">&#xe039;</i>外部播放器播放<i class="mdui-icon material-icons">&#xe5cf;</i>
+      </button>
+      <ul class="mdui-menu" id="player-items">${player_items}</ul>`;
+    
     const plyrUI = `
   <video id="player" class="mdui-video-fluid mdui-center" playsinline controls >
   </video>`;
