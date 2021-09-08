@@ -31,14 +31,14 @@ function init() {
                             <i class="mdui-icon material-icons"></i>
                         </a>
                         <form class="searchBar_form titleBar_exhibit" method="get" action="/${cur}:search">
-                            <input type="text" name="q" placeholder="Search in current drive" value="${search_text}" />
+                            <input type="text" name="q" placeholder="搜尋" value="${search_text}" />
                         </form>
                     </div>`;
     // 盘
     var pan_bar = `
                     <div class="titleBar_item titleBar_pan">
                         <a class="titleBar_link panBar_link"><i></i></a>
-                        <div class="menu_list titleBar_exhibit"><p>Netdisc Drive</p>`;
+                        <div class="menu_list titleBar_exhibit"><p>雲端空間</p>`;
     names.forEach((name, idx) => {
         pan_bar += `<a  class="menu_list_item"  href="/${idx}:/">${name}</a>`;
     });
@@ -210,7 +210,7 @@ function nav(path) {
     //               <i class="mdui-icon material-icons">search</i>
     //           </button>
     //           <form id="search_bar_form" method="get" action="/${cur}:search">
-    //           <input class="mdui-textfield-input" type="text" name="q" placeholder="Search in current drive" value="${search_text}"/>
+    //           <input class="mdui-textfield-input" type="text" name="q" placeholder="搜尋" value="${search_text}"/>
     //           </form>
     //           <button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">close</i></button>
     //       </div>`;
@@ -277,11 +277,11 @@ function list(path) {
     <ul class="mdui-list"> 
      <li class="mdui-list-item th"> 
       <div class="mdui-col-xs-12 mdui-col-sm-7">
-       文件
+       檔案
   <i class="mdui-icon material-icons icon-sort" data-sort="name" data-order="more">expand_more</i>
       </div> 
       <div class="mdui-col-sm-3 mdui-text-right">
-       修改时间
+       時間
   <i class="mdui-icon material-icons icon-sort" data-sort="date" data-order="downward">expand_more</i>
       </div> 
       <div class="mdui-col-sm-2 mdui-text-right">
@@ -507,11 +507,11 @@ function render_search_result_list() {
     <ul class="mdui-list"> 
      <li class="mdui-list-item th"> 
       <div class="mdui-col-xs-12 mdui-col-sm-7">
-       文件
+       檔案
   <i class="mdui-icon material-icons icon-sort" data-sort="name" data-order="more">expand_more</i>
       </div> 
       <div class="mdui-col-sm-3 mdui-text-right">
-       修改时间
+       時間
   <i class="mdui-icon material-icons icon-sort" data-sort="date" data-order="downward">expand_more</i>
       </div> 
       <div class="mdui-col-sm-2 mdui-text-right">
@@ -823,36 +823,6 @@ function file_video(path) {
     var urlPath = url.replace(`.${ext}`, "");
     var fileName = urlPath.split('/').pop();
     urlPath = urlPath.substring(0, urlPath.lastIndexOf('/') + 1);
-    let player_items = [{
-                text: 'MXPlayer(Free)',
-                href: `intent:${url}#Intent;package=com.mxtech.videoplayer.ad;S.title=${path};end`,
-            },
-            {
-                text: 'MXPlayer(Pro)',
-                href: `intent:${url}#Intent;package=com.mxtech.videoplayer.pro;S.title=${path};end`,
-            },
-            {
-                text: 'nPlayer',
-                href: `nplayer-${url}`,
-            },
-            {
-                text: 'VLC',
-                href: `vlc://${url}`,
-            },
-            {
-                text: 'PotPlayer',
-                href: `potplayer://${url}`
-            }
-        ]
-        .map(it => `<li class="mdui-menu-item"><a href="${it.href}" class="mdui-ripple">${it.text}</a></li>`)
-        .join('');
-    player_items += `<li class="mdui-divider"></li>
-                   <li class="mdui-menu-item"><a id="copy-link" class="mdui-ripple">复制链接</a></li>`;
-    const playBtn = `
-      <button class="mdui-btn mdui-ripple mdui-color-theme-accent" mdui-menu="{target:'#player-items'}">
-        <i class="mdui-icon material-icons">&#xe039;</i>外部播放器播放<i class="mdui-icon material-icons">&#xe5cf;</i>
-      </button>
-      <ul class="mdui-menu" id="player-items">${player_items}</ul>`;
 
     var playerUI;
     var playerType;
